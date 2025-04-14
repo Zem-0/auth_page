@@ -8,6 +8,7 @@ import { CallAPIButton } from "./callApiButton";
 import { LinksComponent } from "./linksComponent";
 import { SessionAuthForNextJS } from "./sessionAuthForNextJS";
 import { getSessionForSSR } from "../util";
+import { UserRolesDisplay } from "./userRoles";
 
 export async function HomePage() {
     const cookiesFromReq = await cookies();
@@ -60,6 +61,10 @@ export async function HomePage() {
                         <CallAPIButton />
                     </div>
                 </div>
+                
+                {/* User Roles Display */}
+                <UserRolesDisplay />
+                
                 <LinksComponent />
                 <Image className={styles.separatorLine} src={SeparatorLine} alt="separator" />
             </div>

@@ -526,3 +526,130 @@
         gap: 1rem;
     }
 }
+
+/* User Roles Styles */
+.userRolesContainer {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 2rem auto;
+}
+
+.userRolesTitle {
+    color: #212d4f;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.userRolesContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.userRolesSection {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.userRolesSection h3 {
+    color: #212d4f;
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.rolesList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.roleItem {
+    background: #ff9933;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.tokenPayload {
+    background: #f1f1f1;
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+    font-family: Menlo, monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.loadingContainer, .errorContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    width: 100%;
+}
+
+.loading {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+    font-size: 1.1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 400px;
+}
+
+.error {
+    text-align: center;
+    padding: 2rem;
+    color: #e74c3c;
+    font-size: 1.1rem;
+    background: #fdf0ed;
+    border-radius: 8px;
+    margin: 0 auto;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.error h3 {
+    color: #c0392b;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.error p {
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.retryButton {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.retryButton:hover {
+    background: #c0392b;
+}
