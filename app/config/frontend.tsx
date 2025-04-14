@@ -15,7 +15,26 @@ export function setRouter(router: ReturnType<typeof useRouter>, pathName: string
 export const frontendConfig = (): SuperTokensConfig => {
     return {
         appInfo,
-        recipeList: [EmailPasswordReact.init(), Session.init()],
+        recipeList: [
+            EmailPasswordReact.init({
+                override: {
+                    functions: (originalImplementation) => {
+                        return {
+                            ...originalImplementation,
+                            signIn: async (input) => {
+                                const response = await originalImplementation.signIn(input);
+                                if (response.status === "OK") {
+                                    // Redirect to dashboard after successful login
+                                    window.location.href = "/dashboard";
+                                }
+                                return response;
+                            },
+                        };
+                    },
+                },
+            }),
+            Session.init()
+        ],
         windowHandler: (orig) => {
             return {
                 ...orig,

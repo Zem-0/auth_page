@@ -1,0 +1,93 @@
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.collapsed {
+    width: 80px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #34495e;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.toggleButton {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.navList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navList li {
+    margin: 15px 0;
+}
+
+.navList li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.navList li a:hover {
+    text-decoration: underline;
+}
+
+.active a {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.icon {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.text {
+    font-size: 1rem;
+}
+
+.footer {
+    padding: 15px;
+    border-top: 1px solid #34495e;
+}
+
+.signOutButton {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 10px 15px;
+    width: 100%;
+    text-align: left;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.signOutButton:hover {
+    background-color: #34495e;
+}
