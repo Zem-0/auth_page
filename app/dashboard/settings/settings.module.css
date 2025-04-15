@@ -1,0 +1,299 @@
+.settingsContainer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.settingsHeader {
+    margin-bottom: 2rem;
+}
+
+.settingsHeader h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+}
+
+.settingsHeader p {
+    color: #64748b;
+    font-size: 1.1rem;
+}
+
+.settingsTabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 1rem;
+}
+
+.tabButton {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    background: none;
+    color: #64748b;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 0.5rem;
+}
+
+.tabButton:hover {
+    background-color: #f8fafc;
+    color: #1e293b;
+}
+
+.tabButton.active {
+    background-color: #f1f5f9;
+    color: #3b82f6;
+}
+
+.tabButton svg {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.settingsSection {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.settingsSection h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 1.5rem;
+}
+
+.formGroup {
+    margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #475569;
+    margin-bottom: 0.5rem;
+}
+
+.input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    color: #1e293b;
+    transition: border-color 0.2s ease;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    color: #1e293b;
+    min-height: 100px;
+    resize: vertical;
+    transition: border-color 0.2s ease;
+}
+
+.textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.avatarUpload {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.avatar {
+    width: 4rem;
+    height: 4rem;
+    background-color: #f1f5f9;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #64748b;
+}
+
+.uploadButton {
+    padding: 0.75rem 1.5rem;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    color: #475569;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.uploadButton:hover {
+    background-color: #f1f5f9;
+    border-color: #cbd5e1;
+}
+
+.settingOption {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.settingOption:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.settingInfo h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #1e293b;
+    margin-bottom: 0.25rem;
+}
+
+.settingInfo p {
+    font-size: 0.875rem;
+    color: #64748b;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 3rem;
+    height: 1.75rem;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #e2e8f0;
+    transition: 0.2s;
+    border-radius: 1.75rem;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.25rem;
+    width: 1.25rem;
+    left: 0.25rem;
+    bottom: 0.25rem;
+    background-color: white;
+    transition: 0.2s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #3b82f6;
+}
+
+input:checked + .slider:before {
+    transform: translateX(1.25rem);
+}
+
+.select {
+    width: 200px;
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    color: #1e293b;
+    background-color: white;
+    cursor: pointer;
+}
+
+.select:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.changePasswordButton {
+    padding: 0.75rem 1.5rem;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    color: #475569;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.changePasswordButton:hover {
+    background-color: #f1f5f9;
+    border-color: #cbd5e1;
+}
+
+.settingsFooter {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.saveButton {
+    padding: 0.75rem 2rem;
+    background-color: #3b82f6;
+    border: none;
+    border-radius: 0.5rem;
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.saveButton:hover {
+    background-color: #2563eb;
+}
+
+.cancelButton {
+    padding: 0.75rem 2rem;
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    color: #475569;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.cancelButton:hover {
+    background-color: #f8fafc;
+    border-color: #cbd5e1;
+} 

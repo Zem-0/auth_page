@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import styles from "../dashboard/layout.module.css";
+import styles from "./layout.module.css";
 import Session from "supertokens-auth-react/recipe/session";
 import { useRouter } from "next/navigation";
 
@@ -14,14 +14,12 @@ export default function DashboardPage() {
     useEffect(() => {
         async function getUserInfo() {
             try {
-                // Use Session.doesSessionExist() instead of getSession
                 const sessionExists = await Session.doesSessionExist();
                 if (!sessionExists) {
                     router.push("/auth");
                     return;
                 }
 
-                // Fetch roles from our API endpoint
                 const response = await fetch('/api/user/roles');
                 if (!response.ok) {
                     throw new Error('Failed to fetch user roles');
@@ -39,16 +37,6 @@ export default function DashboardPage() {
         getUserInfo();
     }, [router]);
 
-    const handleLogout = async () => {
-        try {
-            await Session.signOut();
-            router.push("/");
-        } catch (err) {
-            setError("Failed to sign out");
-            console.error("Logout error:", err);
-        }
-    };
-
     if (isLoading) {
         return <div className={styles.loading}>Loading...</div>;
     }
@@ -59,50 +47,43 @@ export default function DashboardPage() {
 
     return (
         <div className={styles.container}>
-            <div className={styles.topBar}>
-                <div className={styles.userInfo}>
-                    {userRole.map((role, index) => (
-                        <span key={role} className={styles.userRole}>
-                            {role}
-                        </span>
-                    ))}
-                </div>
-                <button onClick={handleLogout} className={styles.logoutButton}>
-                    Sign Out
-                </button>
-            </div>
-            
             <div className={styles.content}>
                 <div className={styles.welcomeBox}>
                     <h1 className={styles.welcomeTitle}>
-                        Welcome, <span className={styles.roleHighlight}>{userRole[0]}</span>
+                        Welcome to Your Dashboard
                     </h1>
-                    <p className={styles.welcomeText}>Here's your dashboard overview</p>
+                    <p className={styles.welcomeText}>
+                        You are logged in as a <span className={styles.roleHighlight}>{userRole[0]}</span>
+                    </p>
                 </div>
 
-                <div className={styles.statsGrid}>
-                    <div className={styles.statsCard}>
-                        <div className={styles.statsIcon}>👥</div>
+                <div className={styles.grid}>
+                    <div className={styles.card}>
+                        <div className={styles.cardIcon}>👥</div>
                         <h3>User Management</h3>
                         <p>Manage user permissions and roles</p>
+                        <button className={styles.cardButton}>View Details</button>
                     </div>
 
-                    <div className={styles.statsCard}>
-                        <div className={styles.statsIcon}>📊</div>
+                    <div className={styles.card}>
+                        <div className={styles.cardIcon}>📊</div>
                         <h3>Analytics</h3>
                         <p>View system analytics and metrics</p>
+                        <button className={styles.cardButton}>View Details</button>
                     </div>
 
-                    <div className={styles.statsCard}>
-                        <div className={styles.statsIcon}>⚙️</div>
+                    <div className={styles.card}>
+                        <div className={styles.cardIcon}>⚙️</div>
                         <h3>Settings</h3>
                         <p>Configure system preferences</p>
+                        <button className={styles.cardButton}>View Details</button>
                     </div>
 
-                    <div className={styles.statsCard}>
-                        <div className={styles.statsIcon}>📝</div>
+                    <div className={styles.card}>
+                        <div className={styles.cardIcon}>📝</div>
                         <h3>Reports</h3>
                         <p>Generate and view reports</p>
+                        <button className={styles.cardButton}>View Details</button>
                     </div>
                 </div>
             </div>
