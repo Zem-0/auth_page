@@ -16,9 +16,12 @@ export default function MembersPage() {
     };
 
     // Get role from session claims
-    const userRole = session.loading 
-        ? 'Loading...' 
-        : (session.accessTokenPayload?.role || 'Member');
+    let userRole = 'Loading...';
+    if (!session.loading) {
+        const roleData = session.accessTokenPayload?.['st-role'];
+        const roles = roleData?.v || [];
+        userRole = roles.includes('admin') ? 'Admin' : 'User';
+    }
 
     return (
         <div className={styles.container}>
@@ -61,7 +64,7 @@ export default function MembersPage() {
                 <div className={styles.membersList}>
                     <div className={styles.memberCard}>
                         <div className={styles.memberInfo}>
-                            <span className={styles.role}>
+                            <span className={`${styles.role} ${userRole === 'Admin' ? styles.admin : styles.user}`}>
                                 Current Role: {userRole}
                             </span>
                         </div>
