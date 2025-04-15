@@ -67,22 +67,43 @@ export default function DashboardPage() {
                         </span>
                     ))}
                 </div>
-                <button 
-                    onClick={handleLogout}
-                    className={styles.logoutButton}
-                >
+                <button onClick={handleLogout} className={styles.logoutButton}>
                     Sign Out
                 </button>
             </div>
             
             <div className={styles.content}>
-                <div className={styles.header}>
-                    <h1 className={styles.heading}>Welcome to Dashboard</h1>
-                    <p className={styles.subheading}>Overview of your account and activities</p>
+                <div className={styles.welcomeBox}>
+                    <h1 className={styles.welcomeTitle}>
+                        Welcome, <span className={styles.roleHighlight}>{userRole[0]}</span>
+                    </h1>
+                    <p className={styles.welcomeText}>Here's your dashboard overview</p>
                 </div>
-                
-                <div className={styles.activities}>
-                    {/* Add your activities or dashboard content here */}
+
+                <div className={styles.statsGrid}>
+                    <div className={styles.statsCard}>
+                        <div className={styles.statsIcon}>👥</div>
+                        <h3>User Management</h3>
+                        <p>Manage user permissions and roles</p>
+                    </div>
+
+                    <div className={styles.statsCard}>
+                        <div className={styles.statsIcon}>📊</div>
+                        <h3>Analytics</h3>
+                        <p>View system analytics and metrics</p>
+                    </div>
+
+                    <div className={styles.statsCard}>
+                        <div className={styles.statsIcon}>⚙️</div>
+                        <h3>Settings</h3>
+                        <p>Configure system preferences</p>
+                    </div>
+
+                    <div className={styles.statsCard}>
+                        <div className={styles.statsIcon}>📝</div>
+                        <h3>Reports</h3>
+                        <p>Generate and view reports</p>
+                    </div>
                 </div>
             </div>
         </div>
