@@ -1,0 +1,291 @@
+.container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: #1a1a1a;
+}
+
+.inviteSection {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.inviteSection h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #2d3748;
+}
+
+.inviteForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #4a5568;
+}
+
+.textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 1rem;
+    resize: vertical;
+    min-height: 80px;
+    font-family: inherit;
+}
+
+.textarea:focus {
+    outline: none;
+    border-color: #4299e1;
+    box-shadow: 0 0 0 1px #4299e1;
+}
+
+.select {
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: white;
+    width: 200px;
+}
+
+.select:focus {
+    outline: none;
+    border-color: #4299e1;
+    box-shadow: 0 0 0 1px #4299e1;
+}
+
+.button {
+    padding: 0.75rem 1.5rem;
+    background-color: #4299e1;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    align-self: flex-start;
+}
+
+.button:hover {
+    background-color: #3182ce;
+}
+
+.button:disabled {
+    background-color: #a0aec0;
+    cursor: not-allowed;
+}
+
+.membersSection {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.membersSection h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #2d3748;
+}
+
+.membersList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.memberCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    background-color: #f8fafc;
+}
+
+.memberInfo {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.email {
+    font-size: 1rem;
+    color: #2d3748;
+}
+
+.role {
+    font-size: 0.875rem;
+    color: #4a5568;
+    background-color: #edf2f7;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+}
+
+.status {
+    font-size: 0.875rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+}
+
+.active {
+    background-color: #c6f6d5;
+    color: #2f855a;
+}
+
+.pending {
+    background-color: #feebc8;
+    color: #c05621;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    font-size: 1.125rem;
+    color: #4a5568;
+}
+
+.error {
+    color: #e53e3e;
+    background-color: #fff5f5;
+    border-radius: 6px;
+    padding: 1rem;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.membersContainer {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.inviteCard,
+.membersCard {
+    background: white;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0;
+}
+
+.sectionTitle {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin: 0 0 1.5rem 0;
+}
+
+.memberAvatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    background: #e2e8f0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    color: #64748b;
+}
+
+.memberEmail {
+    font-size: 0.875rem;
+    color: #1e293b;
+    font-weight: 500;
+}
+
+.memberRole {
+    font-size: 0.75rem;
+    color: #64748b;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 1rem;
+    font-weight: 500;
+}
+
+/* Role-specific styles */
+.owner {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.admin {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.member {
+    background: #f3f4f6;
+    color: #4b5563;
+}
+
+.memberStatus {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 640px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .inviteForm {
+        gap: 1rem;
+    }
+
+    .select {
+        width: 100%;
+    }
+
+    .button {
+        width: 100%;
+    }
+
+    .membersContainer {
+        padding: 1rem;
+    }
+
+    .inviteCard,
+    .membersCard {
+        padding: 1rem;
+    }
+
+    .memberItem {
+        flex-wrap: wrap;
+    }
+
+    .memberStatus {
+        width: 100%;
+        justify-content: flex-end;
+        margin-top: 0.5rem;
+    }
+} 

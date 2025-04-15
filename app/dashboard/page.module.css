@@ -221,6 +221,10 @@
 }
 
 @media (max-width: 640px) {
+    .dashboardContainer {
+        padding: 1rem;
+    }
+
     .dashboardHeader {
         flex-direction: column;
         align-items: flex-start;

@@ -1,46 +1,8 @@
 "use client";
 
 import styles from './page.module.css';
-import { useEffect, useState } from 'react';
-
-interface Transaction {
-    date: string;
-    description: string;
-    amount: number;
-    status: string;
-}
-
-// Helper function to format date consistently
-const formatDate = (date: Date): string => {
-    return date.toLocaleDateString('en-GB', {
-        day: '2-digit',
-        month: '2-digit',
-        year: 'numeric'
-    });
-};
 
 export default function DashboardPage() {
-    const [transactions, setTransactions] = useState<Transaction[]>([
-        {
-            date: formatDate(new Date()),
-            description: 'Credits used',
-            amount: -0.23,
-            status: 'Used'
-        },
-        {
-            date: formatDate(new Date()),
-            description: 'Credits used',
-            amount: -0.23,
-            status: 'Used'
-        },
-        {
-            date: formatDate(new Date()),
-            description: 'Credits used',
-            amount: -1,
-            status: 'Used'
-        }
-    ]);
-
     return (
         <div className={styles.dashboardContainer}>
             <div className={styles.dashboardHeader}>
@@ -163,14 +125,24 @@ export default function DashboardPage() {
                                 </tr>
                             </thead>
                             <tbody>
-                                {transactions.map((transaction, index) => (
-                                    <tr key={index}>
-                                        <td>{transaction.date}</td>
-                                        <td>{transaction.description}</td>
-                                        <td className={styles.negative}>{transaction.amount}</td>
-                                        <td><span className={styles.usedStatus}>{transaction.status}</span></td>
-                                    </tr>
-                                ))}
+                                <tr>
+                                    <td>15/04/2024</td>
+                                    <td>Credits used</td>
+                                    <td className={styles.negative}>-0.23</td>
+                                    <td><span className={styles.usedStatus}>Used</span></td>
+                                </tr>
+                                <tr>
+                                    <td>15/04/2024</td>
+                                    <td>Credits used</td>
+                                    <td className={styles.negative}>-0.23</td>
+                                    <td><span className={styles.usedStatus}>Used</span></td>
+                                </tr>
+                                <tr>
+                                    <td>15/04/2024</td>
+                                    <td>Credits used</td>
+                                    <td className={styles.negative}>-1</td>
+                                    <td><span className={styles.usedStatus}>Used</span></td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
