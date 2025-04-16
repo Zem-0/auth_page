@@ -27,18 +27,18 @@ export default function MembersPage() {
         <div className={styles.container}>
             <h1 className={styles.title}>Team Members</h1>
             
-            <section className={styles.inviteSection}>
-                <h2>Invite Team Members</h2>
+            <div className={styles.card}>
+                <h2 className={styles.cardTitle}>Invite Team Members</h2>
                 <form onSubmit={handleInvite} className={styles.inviteForm}>
                     <div className={styles.formGroup}>
                         <label htmlFor="emails" className={styles.label}>Email Addresses (comma-separated)</label>
-                        <textarea
+                        <input
+                            type="text"
                             id="emails"
                             value={emails}
                             onChange={(e) => setEmails(e.target.value)}
-                            className={styles.textarea}
+                            className={styles.input}
                             placeholder="email1@example.com, email2@example.com"
-                            rows={2}
                         />
                     </div>
                     <div className={styles.formGroup}>
@@ -53,11 +53,11 @@ export default function MembersPage() {
                             <option value="Admin">Admin</option>
                         </select>
                     </div>
-                    <button type="submit" className={styles.button}>
+                    <button type="submit" className={styles.submitButton}>
                         Send Invites
                     </button>
                 </form>
-            </section>
+            </div>
             
             <section className={styles.membersSection}>
                 <h2>Current Members</h2>

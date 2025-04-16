@@ -1,11 +1,92 @@
 .sidebar {
-    width: 200px;
+    width: 280px;
     height: 100vh;
-    background-color: #2c3e50;
-    color: white;
-    padding: 20px;
+    background: white;
+    border-right: 1px solid #E5E7EB;
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.logo span {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #111827;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+.navItem {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    border-radius: 6px;
+    color: #6B7280;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.navItem:hover {
+    background: #F9FAFB;
+    color: #111827;
+}
+
+.navItem.active {
+    background: #e8ebea;
+    color: #058157;
+    font-weight: 500;
+}
+
+.navItem.active svg {
+    stroke: #10B981;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    border-top: 1px solid #E5E7EB;
+    margin-top: 1rem;
+}
+
+.avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    background: #F3F4F6;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    color: #4B5563;
+}
+
+.userInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #111827;
 }
 
 .collapsed {
@@ -18,12 +99,6 @@
     justify-content: space-between;
     padding: 15px;
     border-bottom: 1px solid #34495e;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 20px;
 }
 
 .toggleButton {
@@ -68,26 +143,35 @@
     font-size: 1rem;
 }
 
-.footer {
-    padding: 15px;
-    border-top: 1px solid #34495e;
+.sidebarFooter {
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid #E5E7EB;
+    margin-bottom: 1rem;
 }
 
-.signOutButton {
+.logoutButton {
     display: flex;
     align-items: center;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1rem;
-    cursor: pointer;
-    padding: 10px 15px;
+    gap: 0.75rem;
     width: 100%;
-    text-align: left;
-    border-radius: 4px;
-    transition: background-color 0.2s ease;
+    padding: 0.75rem;
+    background: #F3F4F6;
+    border: none;
+    border-radius: 6px;
+    color: #4B5563;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 
-.signOutButton:hover {
-    background-color: #34495e;
+.logoutButton:hover {
+    background: #E5E7EB;
+    color: #111827;
+}
+
+.logoutButton svg {
+    width: 1.25rem;
+    height: 1.25rem;
 }

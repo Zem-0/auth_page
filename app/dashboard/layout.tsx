@@ -1,7 +1,7 @@
 "use client";
 
-import { Sidebar } from "../components/sidebar";
-import styles from "./layout.module.css";
+import Sidebar from '../components/sidebar';
+import styles from './layout.module.css';
 import Session from "supertokens-auth-react/recipe/session";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -14,6 +14,7 @@ export default function DashboardLayout({
     const router = useRouter();
     const [userRole, setUserRole] = useState<string>("");
     const [isLoading, setIsLoading] = useState(true);
+    const credits = "670.31"; // Static credit value
 
     useEffect(() => {
         async function getUserRole() {
@@ -45,16 +46,17 @@ export default function DashboardLayout({
     };
 
     return (
-        <div className={styles.container}>
-            <aside className={styles.sidebar}>
-                <Sidebar />
-            </aside>
-            <main className={styles.mainContent}>
+        <div className={styles.layout}>
+            <Sidebar />
+            <main className={styles.main}>
                 <div className={styles.topBar}>
                     <div className={styles.topBarLeft}>
                         <div className={styles.credits}>
                             <span>My Space</span>
-                            <span className={styles.creditAmount}>670.31 credits</span>
+                            <span className={styles.creditAmount}>
+                                {credits} credits
+                                <span className={styles.statusDot}></span>
+                            </span>
                         </div>
                     </div>
                     <div className={styles.topBarRight}>
@@ -66,10 +68,10 @@ export default function DashboardLayout({
                         </div>
                         <div className={styles.userProfile}>
                             <div className={styles.userInfo}>
-                                <span className={styles.userName}>John Doe</span>
+                                <span className={styles.userName}>Raviteja Manepalli</span>
                             </div>
                             <div className={styles.userAvatar}>
-                                <span>J</span>
+                                <span>R</span>
                             </div>
                         </div>
                     </div>

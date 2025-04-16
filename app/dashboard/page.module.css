@@ -1,66 +1,55 @@
-.dashboardContainer {
+.container {
     padding: 2rem;
     max-width: 1400px;
     margin: 0 auto;
 }
 
-.dashboardHeader {
+.header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 2rem;
 }
 
 .title {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 600;
-    color: #1e293b;
+    color: #111827;
     margin: 0;
 }
 
 .subtitle {
-    color: #64748b;
-    margin: 0.5rem 0 0 0;
     font-size: 0.875rem;
+    color: #6B7280;
+    margin: 0.5rem 0 0 0;
 }
 
-.headerButtons {
+.actions {
     display: flex;
     gap: 1rem;
 }
 
-.viewBilling,
+.viewBilling {
+    padding: 0.5rem 1rem;
+    border: 1px solid #E5E7EB;
+    background: white;
+    border-radius: 6px;
+    color: #374151;
+    font-size: 0.875rem;
+    cursor: pointer;
+}
+
 .addCredits {
     padding: 0.5rem 1rem;
-    border-radius: 0.375rem;
-    font-size: 0.875rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.2s;
-}
-
-.viewBilling {
-    background: transparent;
-    border: 1px solid #e2e8f0;
-    color: #64748b;
-}
-
-.viewBilling:hover {
-    background: #f8fafc;
-    border-color: #cbd5e1;
-}
-
-.addCredits {
-    background: #3b82f6;
+    background: #111827;
     border: none;
+    border-radius: 6px;
     color: white;
+    font-size: 0.875rem;
+    cursor: pointer;
 }
 
-.addCredits:hover {
-    background: #2563eb;
-}
-
-.gridContainer {
+.grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
@@ -68,170 +57,193 @@
 
 .card {
     background: white;
-    border-radius: 0.75rem;
+    border-radius: 8px;
     padding: 1.5rem;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    border: 1px solid #e2e8f0;
 }
 
 .cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     margin-bottom: 1.5rem;
 }
 
 .cardHeader h2 {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     font-weight: 600;
-    color: #1e293b;
+    color: #111827;
     margin: 0;
 }
 
-.subtext {
-    color: #64748b;
+.cardSubtitle {
     font-size: 0.875rem;
+    color: #6B7280;
     margin: 0.25rem 0 0 0;
 }
 
-/* Credit Summary Styles */
+.expandButton {
+    padding: 0.5rem;
+    background: transparent;
+    border: none;
+    color: #6B7280;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardActions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.periodSelect {
+    padding: 0.5rem;
+    border: 1px solid #E5E7EB;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    color: #374151;
+    background: white;
+}
+
 .creditStats {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
 }
 
-.creditItem {
+.statItem {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
 
-.label {
-    color: #64748b;
+.statLabel {
     font-size: 0.875rem;
+    color: #6B7280;
 }
 
-.value {
+.statValue {
     font-size: 1.5rem;
     font-weight: 600;
-    color: #1e293b;
+    color: #111827;
 }
 
 .usageRate {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     gap: 0.5rem;
 }
 
-.status {
+.rateValue {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #111827;
+}
+
+.rateStatus {
     font-size: 0.75rem;
-    color: #10b981;
-    background: #ecfdf5;
     padding: 0.25rem 0.5rem;
-    border-radius: 1rem;
+    background: #D1FAE5;
+    color: #065F46;
+    border-radius: 9999px;
 }
 
-/* Usage Trends Styles */
-.periodSelect {
-    margin-top: 1rem;
-    padding: 0.5rem;
-    border: 1px solid #e2e8f0;
-    border-radius: 0.375rem;
-    color: #64748b;
-    font-size: 0.875rem;
-    background: white;
-}
-
-.trendChart {
-    height: 200px;
-    margin-top: 1rem;
-    background: #f8fafc;
-    border-radius: 0.5rem;
-}
-
-/* Enrichment Usage Styles */
-.enrichmentList {
+.usageList {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.25rem;
 }
 
-.enrichmentItem {
+.usageItem {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
 
-.enrichmentInfo {
+.usageHeader {
     display: flex;
     justify-content: space-between;
-    color: #1e293b;
     font-size: 0.875rem;
+    color: #374151;
 }
 
 .progressBar {
-    height: 0.5rem;
-    background: #f1f5f9;
-    border-radius: 1rem;
+    width: 100%;
+    height: 8px;
+    background: #E5E7EB;
+    border-radius: 9999px;
     overflow: hidden;
 }
 
 .progress {
     height: 100%;
-    background: #3b82f6;
-    border-radius: 1rem;
+    border-radius: 9999px;
     transition: width 0.3s ease;
 }
 
-/* Transaction Table Styles */
-.transactionTable {
+.transactionsTable {
     width: 100%;
     border-collapse: collapse;
-    font-size: 0.875rem;
 }
 
-.transactionTable th {
+.transactionsTable th {
     text-align: left;
     padding: 0.75rem;
-    border-bottom: 1px solid #e2e8f0;
-    color: #64748b;
+    font-size: 0.75rem;
     font-weight: 500;
+    color: #6B7280;
+    border-bottom: 1px solid #E5E7EB;
 }
 
-.transactionTable td {
+.transactionsTable td {
     padding: 0.75rem;
-    border-bottom: 1px solid #e2e8f0;
-    color: #1e293b;
+    font-size: 0.875rem;
+    color: #374151;
+    border-bottom: 1px solid #E5E7EB;
 }
 
 .negative {
-    color: #ef4444;
+    color: #DC2626;
 }
 
 .usedStatus {
-    background: #fee2e2;
-    color: #ef4444;
-    padding: 0.25rem 0.5rem;
-    border-radius: 1rem;
     font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    background: #FEE2E2;
+    color: #991B1B;
+    border-radius: 9999px;
+}
+
+.allTransactions {
+    padding: 0.5rem 1rem;
+    border: 1px solid #E5E7EB;
+    background: white;
+    border-radius: 6px;
+    color: #374151;
+    font-size: 0.875rem;
+    cursor: pointer;
 }
 
 @media (max-width: 1024px) {
-    .gridContainer {
+    .grid {
         grid-template-columns: 1fr;
     }
 }
 
 @media (max-width: 640px) {
-    .dashboardContainer {
+    .container {
         padding: 1rem;
     }
 
-    .dashboardHeader {
+    .header {
         flex-direction: column;
-        align-items: flex-start;
         gap: 1rem;
     }
 
-    .headerButtons {
+    .actions {
         width: 100%;
     }
 
